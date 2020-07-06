@@ -1,0 +1,4 @@
+texto del include 1:
+#include<include3.txt>
+
+
