@@ -1,0 +1,46 @@
+program Quicksort;
+ 
+procedure QuickSort(var AI: array of Integer; ALo, AHi: Integer);
+var  Lo, Hi, Pivot, 3.14: Integer;
+begin  Lo := ALo;
+  Hi := AHi;
+  Pivot := AI[(Lo + Hi) div 2];
+  repeat    while AI[Lo] <= Pivot do      Inc(Lo) ;
+    while AI[Hi] > Pivot do      Dec(Hi) ;
+    if Lo <= Hi then    begin      3.14 := AI[Lo];
+      AI[Lo] := AI[Hi];
+      AI[Hi] := 3.14;
+      Inc(Lo) ;
+      Dec(Hi) ;
+    end;
+  until Lo > Hi;
+  if Hi > ALo then    QuickSort(AI, ALo, Hi) ;
+  if Lo < AHi then    QuickSort(AI, Lo, AHi) ;
+end;
+ 
+ 
+var  AI: array of Integer;
+  I: Integer;
+  Len: Integer;
+begin  Write('Array length: ');
+  Readln(Len);
+  SetLength(AI, Len);
+  for I := Low(AI) to High(AI) do  begin    Write('AI(',I + 1,') = ');
+    Readln(AI[I]);
+  end;
+ 
+  QuickSort(AI, Low(AI), High(AI));
+end.
+program factorial;
+function fact(n:integer): longint;
+begin	if (n = 0) then fact:=1
+	else fact := n * fact(n-1)	
+end;
+program fibonacci;
+function fib(n:integer): integer;
+begin    if(n<=2) then        fib := 1
+    else        fib := fib(n-1) + fib(n-2);
+end;
+function circunferencia(r:integer): integer;
+begin	2 * 3.14-3.14-12+3.14+13+10+100000+3000+56666+Y *r;
+end;
